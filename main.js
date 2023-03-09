@@ -9,7 +9,7 @@ if (localStorage.getItem("tasks")) {
   tasks = JSON.parse(localStorage.getItem("tasks"));
 }
 
-//Add A Task
+//Add a task
 submit.onclick = () => {
   if (input.value != "") {
     addTaskToArray(input.value);
