@@ -1,46 +1,31 @@
-/* body {
+body {
+  font-family: "Cairo", sans-serif;
   background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-} */
+}
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Cairo", sans-serif;
-}
-/* Small Screens */
-@media (min-width: 768px) {
-  container {
-    width: 750px;
-  }
-  input,
-  .submit {
-    height: 30px;
-    font-size: 10px;
-  }
-}
-/* Medium Screens */
-@media (min-width: 992px) {
-  container {
-    width: 970px;
-  }
-}
-/* Large Screens */
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-  font-size: 50px;
-  color: #4158d0;
+  font-size: 40px;
+  color: #92a8e6;
   font-weight: bold;
   text-align: center;
 }
+
 .form {
-  background-color: #ddd;
+  background-color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,15 +47,15 @@ input {
 }
 .submit {
   min-width: 80px;
-  color: white;
-  font-weight: bold;
-  background-color: #4158d0;
-  background-image: linear-gradient(130deg, #4158d0 11%, #c850c0 81%);
+  font-weight: 800;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  color: #ffffff;
 }
 
 .task {
   position: relative;
-  background-color: #ddd;
+  background-color: #eee;
   padding: 10px 0px 10px 16px;
   margin: 10px 0 10px 0px;
   border-radius: 10px;
@@ -82,7 +67,7 @@ input {
   width: 70px;
   position: absolute;
   right: 14px;
-  top: -5px;
+  top: 0px;
   margin-top: 10px;
   color: #ffffff;
   font-size: 15px;
@@ -91,13 +76,24 @@ input {
   padding: 5px;
   text-align: center;
   cursor: pointer;
-  background-color: #4158d0;
-  background-image: linear-gradient(130deg, #4158d0 11%, #c850c0 81%);
-  border: none;
-  outline: none;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+.delete,
+.submit {
+  transition: 0.3s;
+}
+
+.delete:hover,
+.submit:hover {
+  scale: 1.05;
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 300px;
+  }
   input,
   .submit {
     height: 40px;
@@ -105,11 +101,15 @@ input {
   }
   .delete {
     padding: 3px 5px;
+    width: 50px;
+  }
+  .task {
+    font-size: 15px;
   }
 }
 
 .footer {
-  color: #4158d0;
+  color: #92a8e6;
   font-weight: bold;
   text-align: center;
   font-size: 15px;
